@@ -1,3 +1,9 @@
-const solveMeFirst = (a, b) => a + b;
+const simpleArraySum = (ar) => {
+  const result = ar.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+  );
+  return result;
+};
 
-console.log(solveMeFirst(2, 3));
+console.log(simpleArraySum([1, 2, 3, 4, 10, 11]));
+
