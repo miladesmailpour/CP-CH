@@ -6,3 +6,4 @@ const simpleArraySum = (ar) => {
 };
 
 console.log(simpleArraySum([1, 2, 3, 4, 10, 11]));
+

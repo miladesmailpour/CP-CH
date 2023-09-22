@@ -19,6 +19,7 @@ The input format for this function includes:
 - The first line contains an integer, `n`, denoting the size of the array.
 - The second line contains `n` space-separated integers representing the array's elements.
 
+
 ## Constraints
 
 None
@@ -39,3 +40,4 @@ The function prints the sum of the array's elements as a single integer.
 
 Explanation:
 We print the sum of the array's elements: 1 + 2 + 3 + 4 + 10 + 11 = 31
+
