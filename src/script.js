@@ -1,14 +1,6 @@
-const array_1 = [6, 3, 5];
-const array_2 = [7, 3, 9];
+const array = [1000000001, 1000000002, 1000000003, 1000000004, 1000000005];
 
-const compareTriplets = (a, b) => {
-  let result = [0, 0];
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] > b[i]) result[0]++;
-    if (b[i] > a[i]) result[1]++;
-  }
-  return result;
-};
+const aVeryBigSum = (ar) =>
+  ar.reduce((accumulator, currentValue) => accumulator + currentValue);
 
-console.log(compareTriplets(array_1, array_2));
-
+console.log(aVeryBigSum(array));
