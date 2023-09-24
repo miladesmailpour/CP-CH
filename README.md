@@ -1,39 +1,44 @@
-# Big Sum
+# Diagonal Difference
 
-This repository contains a function called `aVeryBigSum` that calculates the sum of elements in an array, taking into account that some integers may be quite large.
+This repository contains a function called `diagonalDifference` that calculates the absolute difference between the sums of the two diagonals in a square matrix.
 
 ## Function Description
 
-The `aVeryBigSum` function takes the following parameter:
+The `diagonalDifference` function takes the following parameter:
 
-- `int ar[n]`: an array of integers.
+- `int arr[n][m]`: an array of integers representing a square matrix.
 
 It returns:
 
-- `long`: the sum of all array elements.
+- `int`: the absolute diagonal difference.
 
 ## Input Format
 
 The input format for this function includes:
 
-- The first line consists of an integer, `n`, denoting the number of elements in the array.
-- The next line contains `n` space-separated integers representing the array's elements.
+- The first line contains a single integer, `n`, the number of rows and columns in the square matrix.
+- Each of the next `n` lines describes a row, `arr[i]`, and consists of `n` space-separated integers representing the matrix elements.
 
 ## Output Format
 
-The function returns the sum of the elements in the array as a long integer.
+The function returns the absolute difference between the sums of the matrix's two diagonals as a single integer.
 
 ## Constraints
 
-- The range of a 32-bit integer is [-2^31, 2^31-1].
-- When adding several integer values, the resulting sum might exceed the above range. You might need to use a long int (or equivalent in other programming languages) to store such sums.
+None
 
 ## Example
 
-```python
-# Sample Input
-5
-1000000001 1000000002 1000000003 1000000004 1000000005
+### Sample Input
+```md
+3
+11 2 4
+4 5 6
+10 8 -12
+```
 
-# Sample Output
-5000000015
+### Sample Output
+```md
+15
+```
+
