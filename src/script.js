@@ -11,3 +11,4 @@ const compareTriplets = (a, b) => {
 };
 
 console.log(compareTriplets(array_1, array_2));
+

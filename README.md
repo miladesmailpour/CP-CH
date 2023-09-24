@@ -13,6 +13,7 @@ It returns:
 
 - `int[2]`: An array where Alice's score is in the first position, and Bob's score is in the second.
 
+
 ## Input Format
 
 The input format for this function includes:
@@ -27,10 +28,10 @@ The input format for this function includes:
 
 ## Example
 
-```python
 # Sample Input 0
 5 6 7
 3 6 10
 
 # Sample Output 0
 1 1
+ 
