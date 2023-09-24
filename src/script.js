@@ -1,14 +1,18 @@
-const array_1 = [6, 3, 5];
-const array_2 = [7, 3, 9];
+const array = [
+  [11, 2, 4],
+  [4, 5, 6],
+  [10, 8, -12],
+];
 
-const compareTriplets = (a, b) => {
-  let result = [0, 0];
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] > b[i]) result[0]++;
-    if (b[i] > a[i]) result[1]++;
+const diagonalDifference = (arr) => {
+  let lr, rl;
+  rl = lr = 0;
+  for (let i = 0; i < arr.length; i++) {
+    lr += arr[i][i];
+    rl += arr[i][Math.abs(i - (arr.length - 1))];
   }
-  return result;
+
+  return Math.abs(lr - rl);
 };
 
-console.log(compareTriplets(array_1, array_2));
-
+console.log(diagonalDifference(array));
