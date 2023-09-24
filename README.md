@@ -1,37 +1,39 @@
-# Compare Triplets
+# Big Sum
 
-This repository contains a function called `compareTriplets` that compares two sets of ratings and determines the respective comparison points for Alice and Bob.
+This repository contains a function called `aVeryBigSum` that calculates the sum of elements in an array, taking into account that some integers may be quite large.
 
 ## Function Description
 
-The `compareTriplets` function takes the following parameters:
+The `aVeryBigSum` function takes the following parameter:
 
-- `int a[3]`: Alice's challenge ratings, represented as a triplet.
-- `int b[3]`: Bob's challenge ratings, represented as a triplet.
+- `int ar[n]`: an array of integers.
 
 It returns:
 
-- `int[2]`: An array where Alice's score is in the first position, and Bob's score is in the second.
-
+- `long`: the sum of all array elements.
 
 ## Input Format
 
 The input format for this function includes:
 
-- The first line contains 3 space-separated integers, `a[0]`, `a[1]`, and `a[2]`, representing Alice's ratings.
-- The second line contains 3 space-separated integers, `b[0]`, `b[1]`, and `b[2]`, representing Bob's ratings.
+- The first line consists of an integer, `n`, denoting the number of elements in the array.
+- The next line contains `n` space-separated integers representing the array's elements.
+
+## Output Format
+
+The function returns the sum of the elements in the array as a long integer.
 
 ## Constraints
 
-- 1 ≤ a[i] ≤ 100
-- 1 ≤ b[i] ≤ 100
+- The range of a 32-bit integer is [-2^31, 2^31-1].
+- When adding several integer values, the resulting sum might exceed the above range. You might need to use a long int (or equivalent in other programming languages) to store such sums.
 
 ## Example
 
-# Sample Input 0
-5 6 7
-3 6 10
+```python
+# Sample Input
+5
+1000000001 1000000002 1000000003 1000000004 1000000005
 
-# Sample Output 0
-1 1
- 
+# Sample Output
+5000000015
