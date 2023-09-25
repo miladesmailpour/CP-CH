@@ -1,27 +1,40 @@
-# Staircase
+# Minimum and Maximum Sum
 
-This repository contains a program that prints a staircase of a given size using '#' symbols and spaces. The staircase is right-aligned, composed of '#' symbols and spaces, and has a height and width of 'n'.
+This repository contains a function called `miniMaxSum` that calculates the minimum and maximum values that can be obtained by summing exactly four out of five positive integers.
 
 ## Function Description
 
-The `staircase` function takes the following parameter:
+The `miniMaxSum` function takes the following parameter:
 
-- `int n`: an integer representing the size of the staircase.
+- `arr`: an array of 5 positive integers.
 
 It prints:
 
-- A staircase as described above.
+- Two space-separated long integers: the minimum sum and the maximum sum of 4 out of 5 elements in the array.
 
 ## Input Format
 
 The input format for this function includes:
 
-- A single integer, `n`, denoting the size of the staircase.
+- A single line containing five space-separated integers.
 
 ## Output Format
 
-The function prints a staircase of size `n` using '#' symbols and spaces. The last line must have `n` spaces in it.
+The function prints two space-separated long integers denoting the respective minimum and maximum values that can be calculated by summing exactly four of the five integers. The output can be greater than a 32-bit integer, so it uses 64-bit integers to avoid integer overflow.
 
 ## Constraints
 
-- 1 <= n <= 100
+None
+
+## Example
+
+### Sample Input
+```md
+    1 2 3 4 5
+```
+
+### Sample Output
+
+```md
+    10 14
+```
