@@ -1,18 +1,15 @@
-const array = [
-  [11, 2, 4],
-  [4, 5, 6],
-  [10, 8, -12],
-];
+const array = [-4, 3, -9, 0, 4, 1];
 
-const diagonalDifference = (arr) => {
-  let lr, rl;
-  rl = lr = 0;
-  for (let i = 0; i < arr.length; i++) {
-    lr += arr[i][i];
-    rl += arr[i][Math.abs(i - (arr.length - 1))];
-  }
+function plusMinus(arr) {
+    let ratio = Array(3).fill(0,0)
+    arr.forEach(element => {
+        if(element > 0) ratio[0]++
+        if(element < 0) ratio[1]++
+        if(element == 0) ratio[2]++
+    })
+    console.log((ratio[0]/arr.length).toFixed(5))
+    console.log((ratio[1]/arr.length).toFixed(5))
+    console.log((ratio[2]/arr.length).toFixed(5))
+}
 
-  return Math.abs(lr - rl);
-};
-
-console.log(diagonalDifference(array));
+console.log(plusMinus(array));
