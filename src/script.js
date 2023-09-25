@@ -1,12 +1,13 @@
-const num = 6;
+const array = [1, 2, 3, 4, 5];
 
-const staircase = (n) => {
-    let line = ''
-    for(let i=1; i < n+1; i++){
-        line = ' '.repeat(n-i).concat('#'.repeat(i))
-        console.log(line)
-        line = ''
-    }
+function miniMaxSum(arr) {
+  let minMax = Array(2).fill(0);
+  arr.sort();
+  for (let i = 0; i < arr.length - 1; i++) {
+    minMax[0] += arr[i];
+    minMax[1] += arr[Math.abs(i - (arr.length - 1))];
+  }
+  console.log(`${minMax[0]} ${minMax[1]}`);
 }
 
-console.log(staircase(num));
+console.log(miniMaxSum(array));
