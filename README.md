@@ -1,17 +1,27 @@
-# Plus Minus
+# Staircase
 
-This repository contains a function called `plusMinus` that calculates and prints the ratios of positive, negative, and zero elements in an array of integers.
+This repository contains a program that prints a staircase of a given size using '#' symbols and spaces. The staircase is right-aligned, composed of '#' symbols and spaces, and has a height and width of 'n'.
 
 ## Function Description
 
-The `plusMinus` function takes the following parameter:
+The `staircase` function takes the following parameter:
 
-- `int arr[n]`: an array of integers.
+- `int n`: an integer representing the size of the staircase.
 
 It prints:
 
-- The proportion of positive values.
-- The proportion of negative values.
-- The proportion of zeros.
+- A staircase as described above.
 
-Each value is printed on a separate line with `n` digits after the decimal point.
+## Input Format
+
+The input format for this function includes:
+
+- A single integer, `n`, denoting the size of the staircase.
+
+## Output Format
+
+The function prints a staircase of size `n` using '#' symbols and spaces. The last line must have `n` spaces in it.
+
+## Constraints
+
+- 1 <= n <= 100
