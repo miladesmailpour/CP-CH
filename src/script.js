@@ -1,7 +1,6 @@
 const array = [3, 2, 1, 3];
 
 const birthdayCakeCandles = (candles) => {
-  console.log(candles);
   if (candles.length < 1) return 0;
   if (candles.length == 1) return 1;
 
