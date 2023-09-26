@@ -1,26 +1,27 @@
-# Minimum and Maximum Sum
+# Birthday Cake Candles
 
-This repository contains a function called `miniMaxSum` that calculates the minimum and maximum values that can be obtained by summing exactly four out of five positive integers.
+This repository contains a function called `birthdayCakeCandles` that counts how many candles are the tallest among the candles on a birthday cake.
 
 ## Function Description
 
-The `miniMaxSum` function takes the following parameter:
+The `birthdayCakeCandles` function takes the following parameter:
 
-- `arr`: an array of 5 positive integers.
+- `int candles[n]`: an array of integers representing the heights of the candles.
 
-It prints:
+It returns:
 
-- Two space-separated long integers: the minimum sum and the maximum sum of 4 out of 5 elements in the array.
+- `int`: the number of candles that are the tallest.
 
 ## Input Format
 
 The input format for this function includes:
 
-- A single line containing five space-separated integers.
+- The first line contains a single integer, `n`, the size of the array.
+- The second line contains `n` space-separated integers, where each integer describes the height of a candle.
 
 ## Output Format
 
-The function prints two space-separated long integers denoting the respective minimum and maximum values that can be calculated by summing exactly four of the five integers. The output can be greater than a 32-bit integer, so it uses 64-bit integers to avoid integer overflow.
+The function returns an integer representing the number of candles that are the tallest.
 
 ## Constraints
 
@@ -29,12 +30,14 @@ None
 ## Example
 
 ### Sample Input
+
 ```md
-    1 2 3 4 5
+4
+3 2 1 3
 ```
 
 ### Sample Output
 
 ```md
-    10 14
+2
 ```
