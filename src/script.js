@@ -1,13 +1,19 @@
-const array = [1, 2, 3, 4, 5];
+const array = [3, 2, 1, 3];
 
-function miniMaxSum(arr) {
-  let minMax = Array(2).fill(0);
-  arr.sort();
-  for (let i = 0; i < arr.length - 1; i++) {
-    minMax[0] += arr[i];
-    minMax[1] += arr[Math.abs(i - (arr.length - 1))];
+const birthdayCakeCandles = (candles) => {
+  console.log(candles);
+  if (candles.length < 1) return 0;
+  if (candles.length == 1) return 1;
+
+  let max = 0;
+  let count = 0;
+  for (let i = 0; i < candles.length; i++) {
+    if (max < candles[i]) max = candles[i];
   }
-  console.log(`${minMax[0]} ${minMax[1]}`);
-}
+  for (let i = 0; i < candles.length; i++) {
+    if (max == candles[i]) count++;
+  }
+  return count;
+};
 
-console.log(miniMaxSum(array));
+console.log(birthdayCakeCandles(array));
