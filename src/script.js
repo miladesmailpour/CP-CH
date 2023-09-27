@@ -13,6 +13,7 @@ function gradingStudents(grades) {
     }
   });
 }
+// round up the grades
 const roundGrade = (grade, reminder, base5) => {
   const maxDiff = 3;
   const base10 = 10;
