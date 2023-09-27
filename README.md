@@ -28,8 +28,8 @@ The function returns an array of integers representing the grades after rounding
 - Every student receives a grade in the inclusive range from 0 to 100.
 - Any grade less than 40 is considered a failing grade.
 - To round a grade:
-  - If the difference between the grade and the next multiple of 5 is less than 3, round up to the next multiple of 5.
-  - If the grade is less than 40, no rounding occurs as the result will still be a failing grade.
+- If the difference between the grade and the next multiple of 5 is less than 3, round up to the next multiple of 5.
+- If the grade is less than 40, no rounding occurs as the result will still be a failing grade.
 
 ## Constraints
 
@@ -40,7 +40,6 @@ None
 ### Sample Input
 
 ```md
-4
 73
 67
 38
