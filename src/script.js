@@ -1,18 +1,24 @@
-const time = '07:05:45PM';
+const grades = [73, 67, 38, 33];
 
-function timeConversion(s) {
-  let arrTime = s.split(':')
-  
-  if (arrTime[arrTime.length-1].includes('AM')){
-      arrTime[arrTime.length-1] = arrTime[arrTime.length-1].replace('AM', '')
-      if(arrTime[0] == '12') arrTime[0] = '00'
-      
-  }else{
-      arrTime[arrTime.length-1] = arrTime[arrTime.length-1].replace('PM', '')
-      if(arrTime[0] == '12') arrTime[0] = '00'
-      arrTime[0] = (parseInt(arrTime[0]) + 12).toString()    
-  }
-  return arrTime.join(':')
+function gradingStudents(grades) {
+  return grades.map((grade) => {
+    const roundBase = 5;
+    if (grade < 38) return grade;
+    if (grade == 100) return grade;
+    const reminder = grade % 10;
+    if (reminder >= roundBase) {
+      return roundGrade(grade, reminder, roundBase * 2);
+    } else {
+      return roundGrade(grade, reminder, roundBase);
+    }
+  });
 }
+const roundGrade = (grade, reminder, base5) => {
+  const maxDiff = 3;
+  const base10 = 10;
+  if (base5 - reminder < maxDiff) {
+    return Math.floor((grade / base10) % base10) * base10 + base5;
+  } else return grade;
+};
 
-console.log(timeConversion(time));
+console.log(gradingStudents(grades));
