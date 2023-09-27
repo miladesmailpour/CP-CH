@@ -1,18 +1,18 @@
-const array = [3, 2, 1, 3];
+const time = '07:05:45PM';
 
-const birthdayCakeCandles = (candles) => {
-  if (candles.length < 1) return 0;
-  if (candles.length == 1) return 1;
-
-  let max = 0;
-  let count = 0;
-  for (let i = 0; i < candles.length; i++) {
-    if (max < candles[i]) max = candles[i];
+function timeConversion(s) {
+  let arrTime = s.split(':')
+  
+  if (arrTime[arrTime.length-1].includes('AM')){
+      arrTime[arrTime.length-1] = arrTime[arrTime.length-1].replace('AM', '')
+      if(arrTime[0] == '12') arrTime[0] = '00'
+      
+  }else{
+      arrTime[arrTime.length-1] = arrTime[arrTime.length-1].replace('PM', '')
+      if(arrTime[0] == '12') arrTime[0] = '00'
+      arrTime[0] = (parseInt(arrTime[0]) + 12).toString()    
   }
-  for (let i = 0; i < candles.length; i++) {
-    if (max == candles[i]) count++;
-  }
-  return count;
-};
+  return arrTime.join(':')
+}
 
-console.log(birthdayCakeCandles(array));
+console.log(timeConversion(time));
