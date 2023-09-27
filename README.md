@@ -1,35 +1,40 @@
-# Grading Students
+# Apple and Orange Count
 
-This repository contains a function called `gradingStudents` that automates the process of rounding students' grades based on a specific grading policy.
+This repository contains a function called `countApplesAndOranges` that calculates the number of apples and oranges that land on Sam's house based on given information.
 
 ## Function Description
 
-The `gradingStudents` function takes the following parameter:
+The `countApplesAndOranges` function takes the following parameters:
 
-- `int grades[n]`: an array of integers representing the grades of students.
+- `s`: an integer, the starting point of Sam's house location.
+- `t`: an integer, the ending location of Sam's house location.
+- `a`: an integer, the location of the Apple tree.
+- `b`: an integer, the location of the Orange tree.
+- `apples`: an integer array, distances at which each apple falls from the tree.
+- `oranges`: an integer array, distances at which each orange falls from the tree.
 
-It returns:
+It prints:
 
-- `int[n]`: the grades after rounding as per the specified policy.
+- Two integers on two different lines:
+  - The first integer: the number of apples that fall on Sam's house.
+  - The second integer: the number of oranges that fall on Sam's house.
 
 ## Input Format
 
 The input format for this function includes:
 
-- The first line contains a single integer, `n`, the number of students.
-- Each of the `n` subsequent lines contains a single integer, `grades[i]`, representing the grade of a student.
+- The first line contains two space-separated integers denoting the respective values of `s` and `t`.
+- The second line contains two space-separated integers denoting the respective values of `a` and `b`.
+- The third line contains two space-separated integers denoting the respective values of `m` and `n` (the number of apples and oranges).
+- The fourth line contains `m` space-separated integers denoting the respective distances that each apple falls from point `a`.
+- The fifth line contains `n` space-separated integers denoting the respective distances that each orange falls from point `b`.
 
 ## Output Format
 
-The function returns an array of integers representing the grades after rounding.
+The function prints two integers on two different lines:
 
-## Grading Policy
-
-- Every student receives a grade in the inclusive range from 0 to 100.
-- Any grade less than 40 is considered a failing grade.
-- To round a grade:
-- If the difference between the grade and the next multiple of 5 is less than 3, round up to the next multiple of 5.
-- If the grade is less than 40, no rounding occurs as the result will still be a failing grade.
+- The first integer: the number of apples that fall on Sam's house.
+- The second integer: the number of oranges that fall on Sam's house.
 
 ## Constraints
 
@@ -40,24 +45,28 @@ None
 ### Sample Input
 
 ```md
-73
-67
-38
-33
+7 11
+5 15
+3 2
+-2 2 1
+5 -6
 ```
 
 ### Sample Output
 
 ```md
-75
-67
-40
-33
+1
+1
 ```
 
 Explanation:
 
-- The first grade, 73, is rounded up to 75 because the difference between 75 and 73 is less than 3.
-- The second grade, 67, remains unchanged as it's already 67.
-- The third grade, 38, is rounded up to 40 to meet the minimum passing grade requirement.
-- The fourth grade, 33, remains unchanged as it's less than 40.
+- The first apple falls at position 5+(-2) = 3.
+- The second apple falls at position 5+2 = 7.
+- The third apple falls at position 5+1 = 6.
+- The first orange falls at position 15+5 = 20.
+- The second orange falls at position 15+(-6) = 9.
+- Only one fruit (the second apple) falls within the region between 7 and 11, so we print 1 as our first line of output.
+- Only the second orange falls within the region between 7 and 11, so we print 1 as our second line of output.
+
+Feel free to use this function to calculate the number of apples and oranges that land on Sam's house based on the given input or modify it as needed.
