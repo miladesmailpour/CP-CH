@@ -1,43 +1,41 @@
-# Birthday Cake Candles
+# Time Conversion
 
-This repository contains a function called `birthdayCakeCandles` that counts how many candles are the tallest among the candles on a birthday cake.
+This repository contains a function called `timeConversion` that converts a time from a 12-hour AM/PM format to a 24-hour military time format.
 
 ## Function Description
 
-The `birthdayCakeCandles` function takes the following parameter:
+The `timeConversion` function takes the following parameter:
 
-- `int candles[n]`: an array of integers representing the heights of the candles.
+- `string s`: a time in 12-hour clock format.
 
 It returns:
 
-- `int`: the number of candles that are the tallest.
+- `string`: the time in 24-hour clock format.
 
 ## Input Format
 
 The input format for this function includes:
 
-- The first line contains a single integer, `n`, the size of the array.
-- The second line contains `n` space-separated integers, where each integer describes the height of a candle.
+- A single string `s` that represents a time in 12-hour clock format (i.e., "hh:mm:ssAM" or "hh:mm:ssPM").
 
 ## Output Format
 
-The function returns an integer representing the number of candles that are the tallest.
+The function returns a string representing the input time in 24-hour clock format.
 
 ## Constraints
 
-None
+- All input times are valid.
 
 ## Example
 
 ### Sample Input
 
 ```md
-4
-3 2 1 3
+07:05:45PM
 ```
 
 ### Sample Output
 
 ```md
-2
+19:05:45
 ```
