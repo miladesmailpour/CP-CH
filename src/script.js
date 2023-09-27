@@ -1,25 +1,19 @@
-const grades = [73, 67, 38, 33];
+const apples = [-2, 2, 1];
+const oranges = [5, -6];
 
-function gradingStudents(grades) {
-  return grades.map((grade) => {
-    const roundBase = 5;
-    if (grade < 38) return grade;
-    if (grade == 100) return grade;
-    const reminder = grade % 10;
-    if (reminder >= roundBase) {
-      return roundGrade(grade, reminder, roundBase * 2);
-    } else {
-      return roundGrade(grade, reminder, roundBase);
-    }
-  });
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+  // s < a + d < t
+  console.log(fruitPicker(s, t, a, apples));
+  console.log(fruitPicker(s, t, b, oranges));
 }
-// round up the grades
-const roundGrade = (grade, reminder, base5) => {
-  const maxDiff = 3;
-  const base10 = 10;
-  if (base5 - reminder < maxDiff) {
-    return Math.floor((grade / base10) % base10) * base10 + base5;
-  } else return grade;
+const fruitPicker = (startLand, endLand, tree, fruit) => {
+  let distance, fruitCount;
+  distance = fruitCount = 0;
+  for (let i = 0; i < fruit.length; i++) {
+    distance = tree + fruit[i];
+    if (distance >= startLand && distance <= endLand) fruitCount++;
+  }
+  return fruitCount;
 };
 
-console.log(gradingStudents(grades));
+console.log(countApplesAndOranges(7, 11, 5, 15, apples, oranges));
