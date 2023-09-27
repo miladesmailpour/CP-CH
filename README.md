@@ -25,9 +25,8 @@ The input format for this function includes:
 
 - The first line contains two space-separated integers denoting the respective values of `s` and `t`.
 - The second line contains two space-separated integers denoting the respective values of `a` and `b`.
-- The third line contains two space-separated integers denoting the respective values of `m` and `n` (the number of apples and oranges).
-- The fourth line contains `m` space-separated integers denoting the respective distances that each apple falls from point `a`.
-- The fifth line contains `n` space-separated integers denoting the respective distances that each orange falls from point `b`.
+- The third line contains `m` space-separated integers denoting the respective distances that each apple falls from point `a`.
+- The fourth line contains `n` space-separated integers denoting the respective distances that each orange falls from point `b`.
 
 ## Output Format
 
@@ -68,5 +67,3 @@ Explanation:
 - The second orange falls at position 15+(-6) = 9.
 - Only one fruit (the second apple) falls within the region between 7 and 11, so we print 1 as our first line of output.
 - Only the second orange falls within the region between 7 and 11, so we print 1 as our second line of output.
-
-Feel free to use this function to calculate the number of apples and oranges that land on Sam's house based on the given input or modify it as needed.
