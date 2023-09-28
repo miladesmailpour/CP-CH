@@ -1,69 +1,55 @@
-# Apple and Orange Count
+# CamelCase Word Count
 
-This repository contains a function called `countApplesAndOranges` that calculates the number of apples and oranges that land on Sam's house based on given information.
+This repository contains a function called `camelcase` that calculates the number of words in a string following CamelCase formatting.
 
 ## Function Description
 
-The `countApplesAndOranges` function takes the following parameters:
+The `camelcase` function takes the following parameter:
 
-- `s`: an integer, the starting point of Sam's house location.
-- `t`: an integer, the ending location of Sam's house location.
-- `a`: an integer, the location of the Apple tree.
-- `b`: an integer, the location of the Orange tree.
-- `apples`: an integer array, distances at which each apple falls from the tree.
-- `oranges`: an integer array, distances at which each orange falls from the tree.
+- `string s`: the string to analyze.
 
-It prints:
+It returns:
 
-- Two integers on two different lines:
-  - The first integer: the number of apples that fall on Sam's house.
-  - The second integer: the number of oranges that fall on Sam's house.
+- `int`: the number of words in the CamelCase string.
 
 ## Input Format
 
 The input format for this function includes:
 
-- The first line contains two space-separated integers denoting the respective values of `s` and `t`.
-- The second line contains two space-separated integers denoting the respective values of `a` and `b`.
-- The third line contains `m` space-separated integers denoting the respective distances that each apple falls from point `a`.
-- The fourth line contains `n` space-separated integers denoting the respective distances that each orange falls from point `b`.
+- A single line containing a string `s`.
 
 ## Output Format
 
-The function prints two integers on two different lines:
-
-- The first integer: the number of apples that fall on Sam's house.
-- The second integer: the number of oranges that fall on Sam's house.
+The function returns an integer representing the number of words in the CamelCase string.
 
 ## Constraints
 
 None
+
+## CamelCase Formatting
+
+In CamelCase formatting:
+- The string is a concatenation of one or more words consisting of English letters.
+- All letters in the first word are lowercase.
+- For each of the subsequent words, the first letter is uppercase, and the rest of the letters are lowercase.
 
 ## Example
 
 ### Sample Input
 
 ```md
-7 11
-5 15
-3 2
--2 2 1
-5 -6
+saveChangesInTheEditor
 ```
 
 ### Sample Output
 
 ```md
-1
-1
+5
 ```
+
 
 Explanation:
 
-- The first apple falls at position 5+(-2) = 3.
-- The second apple falls at position 5+2 = 7.
-- The third apple falls at position 5+1 = 6.
-- The first orange falls at position 15+5 = 20.
-- The second orange falls at position 15+(-6) = 9.
-- Only one fruit (the second apple) falls within the region between 7 and 11, so we print 1 as our first line of output.
-- Only the second orange falls within the region between 7 and 11, so we print 1 as our second line of output.
+The string `saveChangesInTheEditor` contains five words: `save`, `Changes`, `In`, `The`, and `Editor`.
+
+Feel free to use this function to calculate the number of words in CamelCase strings or modify it as needed.
