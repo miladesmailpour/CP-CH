@@ -1,55 +1,59 @@
-# CamelCase Word Count
+# String Reduction
 
-This repository contains a function called `camelcase` that calculates the number of words in a string following CamelCase formatting.
+This repository contains a function called `superReducedString` that reduces a string of lowercase characters by removing adjacent matching pairs of letters.
 
 ## Function Description
 
-The `camelcase` function takes the following parameter:
+The `superReducedString` function takes the following parameter:
 
-- `string s`: the string to analyze.
+- `string s`: a string to reduce.
 
 It returns:
 
-- `int`: the number of words in the CamelCase string.
+- `string`: the reduced string or "Empty String" if the final string is empty.
 
 ## Input Format
 
 The input format for this function includes:
 
-- A single line containing a string `s`.
+- A single string `s`.
 
 ## Output Format
 
-The function returns an integer representing the number of words in the CamelCase string.
+The function returns a string representing the reduced string or "Empty String."
 
 ## Constraints
 
 None
 
-## CamelCase Formatting
+## Reduction Process
 
-In CamelCase formatting:
-- The string is a concatenation of one or more words consisting of English letters.
-- All letters in the first word are lowercase.
-- For each of the subsequent words, the first letter is uppercase, and the rest of the letters are lowercase.
+In each operation:
+
+- Select a pair of adjacent letters that match.
+- Delete the selected pair of letters.
+- Delete as many characters as possible using this method.
+
+If the final string is empty, return "Empty String."
 
 ## Example
 
-### Sample Input
+### Sample Input 0
 
 ```md
-saveChangesInTheEditor
+aaabccddd
 ```
 
 ### Sample Output
 
 ```md
-5
+abd
 ```
 
+Explanation 0:
 
-Explanation:
+Perform the following sequence of operations to get the final string:
 
-The string `saveChangesInTheEditor` contains five words: `save`, `Changes`, `In`, `The`, and `Editor`.
-
-Feel free to use this function to calculate the number of words in CamelCase strings or modify it as needed.
+1. `aaabccddd` → `abccddd`
+2. `abccddd` → `abddd`
+3. `abddd` → `abd`
